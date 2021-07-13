@@ -11,7 +11,8 @@
     
     var f = $(this).find('.form-group'),
       ferror = false,
-      emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+      emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i,
+      phoneExp = /^((\+)33|0)[1-9](\d{2}){4}$/;
 
     f.children('input').each(function() { // run all inputs
      
@@ -43,6 +44,12 @@
 
           case 'email':
             if (!emailExp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;
+
+          case 'phone':
+            if (!phoneExp.test(i.val())) {
               ferror = ierror = true;
             }
             break;
@@ -117,7 +124,7 @@
         });
       });
     } else {
-      php_email_form_submit(this_form,action,this_form.serialize());
+      sendMail()
     }
     
     return true;
