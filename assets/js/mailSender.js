@@ -1,5 +1,5 @@
 emailjs.init('user_IbW5twrfSlgvKyeqd8dIv')
-$('.carousel').carousel({ interval: 2000 })
+$('.carousel').carousel({ interval: 5000 })
 
 function sendMail(){
     const form = document.getElementById('form'),
