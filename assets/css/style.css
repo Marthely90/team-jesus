@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   transition: all 0.5s;
   padding: 15px 0;
-  background: #000;
+  background: #ffffff;
 }
 
 #header .logo h1 {
@@ -115,10 +115,11 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: rgba(255, 255, 255, 0.8);
+  color: #545b62;
   padding: 8px 0 12px 0;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -145,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #fff;
+  color: #1e7e34;
 }
 
 .nav-menu .drop-down ul {
