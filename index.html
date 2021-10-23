@@ -550,6 +550,11 @@
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/ -->
         Designed by <a href="">GJMTs.</a> from <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
+        <p>
+          Nombre de visiteurs :
+          (<span id="visits"></span>)
+        </p>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -574,6 +579,12 @@
   <!-- Template Main JS File -->
   <script src="assets/js/mailSender.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/teamjesus/visits?callback=cb"></script>
 
 </body>
 
