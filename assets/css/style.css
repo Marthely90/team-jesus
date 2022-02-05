@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 992px) {
   #header {
     height: 60px;
-    padding: 8px 0;
+    padding: 1px 0;
   }
 }
 
@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #fff;
+  color: #52bfef;
 }
 
 .mobile-nav {
