@@ -23,6 +23,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/lightgallery.min.css" />
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -665,6 +666,31 @@
     </section><!-- End oxyjeunes Section -->
 
     <!-- ======= Team Section ======= -->
+    <section id="gallery" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Gallery</h2>
+        </div>
+
+        <div class="row">
+
+          <div id="lightgallery">
+            <a href="assets/img/slide/slide-17.jpg" data-lg-size="1600-2400">
+                <img alt="img1" src="assets/img/slide/slide-17.jpg" />
+            </a>
+            <a href="assets/img/slide/slide-17.jpg" data-lg-size="1024-800">
+                <img alt="img2" src="assets/img/slide/slide-17.jpg" />
+            </a>
+        </div>        
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Team Section -->
+
+    <!-- ======= Team Section ======= -->
     <!-- <section id="team" class="team">
       <div class="container">
 
@@ -828,6 +854,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/lightgallery.min.js"></script>
 
   <!-- Template JS Framework -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
@@ -841,6 +868,7 @@
     function cb(response) {
         document.getElementById('visits').innerText = response.value;
     }
+    lightGallery(document.getElementById('lightgallery'));
     </script>
     <script async src="https://api.countapi.xyz/hit/teamjesus/visits?callback=cb"></script>
 
