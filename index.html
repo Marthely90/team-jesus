@@ -864,11 +864,25 @@
   <!-- Template Main JS File -->
   <script src="assets/js/mailSender.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
+  <script type="text/javascript"> 
     function cb(response) {
         document.getElementById('visits').innerText = response.value;
     }
-    lightGallery(document.getElementById('lightgallery'));
+    $('#lightgallery').lightGallery({
+                thumbnail: false,
+                fullScreen: true,
+                download: false,
+                share: false,
+                actualSize: false,
+                zoom: false,
+                autoplay: false,
+                counter: false,
+                controls: false,
+                enableDrag: false,
+                mousewheel: false,
+                keyPress: true,
+                escKey: true
+            }); 
     </script>
     <script async src="https://api.countapi.xyz/hit/teamjesus/visits?callback=cb"></script>
 
