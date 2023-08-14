@@ -711,6 +711,11 @@ section {
   min-height: 320px;
 }
 
+.owl-carousel .testimonial-item p{
+  max-height: 600px !important;
+  overflow : auto;
+}
+
 .testimonials .testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 50%;

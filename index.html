@@ -24,6 +24,10 @@
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
+    <!-- SLIMSELECT -->
+    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+    <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet"></link>
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -165,7 +169,7 @@
     
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
-                        <img src="assets/img/testimonials/say.png" class="testimonial-img" alt="Grace LALISSINI">
+                        <img src="assets/img/testimonials/grace_lalissini.png" class="testimonial-img" alt="Grace LALISSINI">
                         <h3>Grace LALISSINI</h3>
                         <h4>07 août 2023</h4>
                     </div>
@@ -2045,8 +2049,16 @@
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
                     <h2>Evènements</h2>
-                    <p>
+                    <!-- <p>
                         Rendez-vous tous les deuxiemes et quatrièmes samedi du mois.
+                    </p> -->
+                    <p>
+                        <b>Bonnes Vacances à tous et à toutes !</b>
+                        <br/>
+                        Rendez-vous à la rentrée, pour un nouveau programme.
+                        <br/>
+                        <br/>
+                        N'hésitez pas à cliquer sur les images pour revivre les moments fort de l'année !
                     </p>
                 </div>
                 <div id="carouselEvent" class="carousel slide" data-ride="carousel">
@@ -2055,44 +2067,30 @@
                         <li data-target="#carouselEvent" data-slide-to="1"></li>
                         <li data-target="#carouselEvent" data-slide-to="2"></li>
                         <li data-target="#carouselEvent" data-slide-to="3"></li>
-                        <li data-target="#carouselEvent" data-slide-to="4"></li>
-                        <!-- <li data-target="#carouselEvent" data-slide-to="5"></li> -->
                     </ol>
                     <div class="carousel-inner">
 
                         <div class="carousel-item active">
-                            <a target="_blank" href="assets/img/events/planning.jpg">
-                                <img class="d-block w-100" src="assets/img/events/planning.jpg" alt="Planning">
+                            <a target="_blank" href="assets/img/events/bonnes_vacances.jpg">
+                                <img class="d-block w-100" src="assets/img/events/bonnes_vacances.jpg" alt="Bonnes Vacances">
                             </a>
                         </div>
 
-                        <!--  <div class="carousel-item">
-                            <a target="_blank" href="assets/img/events/weekendProphFull.jpg">
-                                <img class="d-block w-100" src="assets/img/events/weekendProph.jpg" alt="week end prohetique du 30 mars au 02 avril">
-                            </a>
-                        </div> -->
-
-                         <div class="carousel-item">
-                            <a target="_blank" href="http://bibleimpact.fr/ ">
-                                <img class="d-block w-100" src="assets/img/events/bibleImpact.jpg" alt="bible impact" title="Cliquez pour participer">
-                            </a>
-                        </div> 
-
                         <div class="carousel-item ">
-                            <a target="_blank" href="assets/img/events/resume_interjeunesse.mp4">
+                            <a target="_blank" href="assets/img/events/resume_interjeunesse.mp4" title="cliquer pour voir le résumé en vidéo">
                                 <img class="d-block w-100" src="assets/img/events/interjeunesse.jpg" alt="FlashBack inter-jeunnesse">
                             </a>
                         </div>
 
                         <div class="carousel-item ">
-                            <a target="_blank" href="assets/img/events/concert.jpg">
-                                <img class="d-block w-100" src="assets/img/events/concert.jpg" alt="Concert">
+                            <a target="_blank" href="assets/img/events/wej.mp4" title="cliquer pour voir le résumé en vidéo">
+                                <img class="d-block w-100" src="assets/img/events/wej.jpg" alt="week-end Jeunesse">
                             </a>
                         </div>
 
                         <div class="carousel-item ">
-                            <a target="_blank" href="https://www.youtube.com/watch?v=6F9aq4m1xMk">
-                                <img class="d-block w-100" src="assets/img/events/moov-echo-2023.jpg" alt="ECHO 2023" title="Retiens dès maintenant le week-end du 19 au 21 mai 2023. Les jeunes et ados de toute la France vont se réunir à Clermont-Ferrand pour communier et célébrer Dieu. Fais nous savoir avant le 31 décembre si tu souhaites y participer.">
+                            <a target="_blank" href="assets/img/events/EGLISE_PROJET_FINAL.mp4" title="cliquer pour voir le résumé en vidéo">
+                                <img class="d-block w-100" src="assets/img/events/concert_21_janv2023.jpg" alt="Concert">
                             </a>
                         </div>
 
@@ -2504,11 +2502,11 @@
     <script src="assets/js/mailSender.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        function cb(response) {
-            document.getElementById('visits').innerText = response.value;
-        }
+        new SlimSelect({
+            select: '.slims'
+        })
     </script>
-    <script async src="https://api.countapi.xyz/hit/teamjesus/visits?callback=cb"></script>
+    <!-- <script async src="https://api.countapi.xyz/hit/teamjesus/visits?callback=cb"></script> -->
 
 </body>
 
