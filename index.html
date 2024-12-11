@@ -2113,9 +2113,16 @@
     <script src="assets/js/mailSender.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+        const pds = document.querySelector('#pensee_dla_semaine')
+
         new SlimSelect({
             select: '.slims'
-        })
+        });
+
+        if (/iPhone/i.test(navigator.userAgent)) {
+            pds.style.display="none";
+        }
+
     </script>
     <!-- <script async src="https://api.countapi.xyz/hit/teamjesus/visits?callback=cb"></script> -->
 
