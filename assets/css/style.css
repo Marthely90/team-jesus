@@ -712,7 +712,7 @@ section {
 }
 
 .owl-carousel .testimonial-item p{
-  max-height: 600px !important;
+  /*max-height: 600px !important;*/
   overflow : auto;
 }
 
