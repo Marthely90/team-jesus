@@ -1,13 +1,22 @@
+function openLink(url) {
+  if (url) {
+    const newWindow = window.open(url, "_blank");
 
+    // Vérifie si la fenêtre a été bloquée ou non
+    if ( !newWindow || newWindow.closed || typeof newWindow.closed === "undefined" ) {
+      // Alternative pour iOS si window.open est bloqué
+      window.location.href = url;
+    }
+  } else {
+    console.error("Aucune URL fournie.");
+  }
+}
 
-function affiche(detailNom, detailUrl,detailDate) {
-    const rapportUX = `
-    <li class="rapport">
+function affiche(detailNom, detailCategorie, detailUrl, detailDate) {
+  const rapportUX = `
+    <li class="rapport" onclick="openLink('${detailUrl}')">
         <div class="links">
-            <a target="_blank" href="${detailUrl}">
                 <img src="/assets/img/pdf-icons.png" alt="telecharger">
-            </a>
-
         </div>
 
         <div class="infos">
@@ -15,20 +24,21 @@ function affiche(detailNom, detailUrl,detailDate) {
                 ${detailNom}
                 
             </p> 
-        
-            <div class="date">
-                ${detailDate}
-            </div> 
+            <div class="detail">
+                    <b>${detailCategorie}</b>
+                </div> 
+                <div class="date">
+                    ${detailDate}
+                </div>
+            </div>
+            
         </div>
     </li>`;
 
-    const listeUX = document.getElementById('$liste');
+  const listeUX = document.getElementById("$liste");
 
-    listeUX.innerHTML += rapportUX;
-
+  listeUX.innerHTML += rapportUX;
 }
-
-
 
 // function rapportUX(detailNom, detailUrl) {
 //         // Création de l'élément li
@@ -80,22 +90,22 @@ function affiche(detailNom, detailUrl,detailDate) {
 //     document.getElementById('$liste').appendChild(liElement);
 // }
 
-
-
-fetch('/assets/data/rapport.json')
-    .then(response => response.json())
-    .then(data => {
-        var size = Object.keys(data).length;      
-        if (size != 1) {
-            for (let i = 1; i < size; i++) {
-
-                affiche(data[`Rapport_${i}`].nom,data[`Rapport_${i}`].url, data[`Rapport_${i}`].date );
-            }
-        }
-        else{
-            affiche(data.Rapport_1.nom,data.Rapport_1.url,data.Rapport_1.date);
-        }
-    })
-    .catch(error => console.error('Error:', error));
-
-
+fetch("/assets/data/rapport.json")
+  .then((response) => response.json())
+  .then((data) => {
+    var size = Object.keys(data).length;
+    if (size > 0) {
+      for (let i = 1; i <= size; i++) {
+        affiche(
+          data[`Rapport_${i}`].nom,
+          data[`Rapport_${i}`].categorie,
+          data[`Rapport_${i}`].url,
+          data[`Rapport_${i}`].date
+        );
+      }
+    }
+    // else{
+    //     affiche(data.Rapport_1.nom,data.Rapport_1.url,data.Rapport_1.date);
+    // }
+  })
+  .catch((error) => console.error("Error:", error));

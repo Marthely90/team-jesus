@@ -1577,7 +1577,7 @@ section {
 #champRecap h4 {
     /*STRUCTURE*/
   padding: 5px 12px;
-  max-width: 70px;
+  max-width: 120px;
   text-align: center;
 
     /*STYLE*/
@@ -1595,10 +1595,10 @@ section {
   height: 150px;
 
     /*STYLE*/
-  border-top: 2px solid #1bac91;
+
   border-bottom: 2px solid #1bac91;
-  border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 
 }
 
@@ -1610,7 +1610,8 @@ section {
   flex-direction: row;
   margin: 15px 5px;
   padding: 5px 5px 5px 5px;
-  width: 180px;
+  max-width: 300px;
+  min-width: 200px;
   height: 60px;
 
 
@@ -1618,6 +1619,7 @@ section {
   box-shadow: 0px 0px 3px black;
   border-radius: 50px;
   background-color: #eff7f6;
+  cursor: pointer;
 
 }
 
@@ -1630,6 +1632,12 @@ section {
 
 }
 
+#champRecap .rapport .infos .detail {
+    /*STRUCTURE*/
+  display: flex;
+  flex-direction: column;
+}
+
 #champRecap .rapport .infos p {
     /*STRUCTURE*/
   margin: 0px;
@@ -1640,6 +1648,12 @@ section {
 
 }
 
+#champRecap .rapport .infos b{
+    /*STYLE*/
+  font-size: 0.6rem;
+}
+
+
 #champRecap .rapport .infos .date {
     /*STRUCTURE*/
   text-align: center;
@@ -1647,10 +1661,6 @@ section {
   width: 80px;
 
   /*STYLE*/
-  border-radius: 20px;
-  border: 1px #808080 solid;
-  background-color: #444444;
-  color: #ffffff;
   font-size: 0.6rem;
 
 }
@@ -1663,7 +1673,7 @@ section {
 
   /*STYLE*/
   border-radius: 50%;
-  background-color: #1bac91;
+  background-color: #1bac77;
   box-shadow: inset 0px 0px 10px #ffffff;
 
 
@@ -1681,7 +1691,7 @@ section {
 
 }
 
-#champRecap .rapport .links a img {
+#champRecap .rapport .links img {
     /*STRUCTURE*/
   width: 100%;
   filter: invert(100%);
