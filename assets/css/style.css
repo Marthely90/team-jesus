@@ -1526,3 +1526,141 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+
+/*==========================================================================
+                  RAPPORT PDF STYLE
+=============================================================================*/
+
+/*champRecap*/
+#champRecap {
+  /*STRUCTURE*/
+  margin: 0vh 5vw;
+  /*STYLE*/
+  color: #444444;
+
+
+}
+
+#champRecap h4 {
+    /*STRUCTURE*/
+  padding: 5px 12px;
+  max-width: 120px;
+  text-align: center;
+
+    /*STYLE*/
+  background-color: #1bac91;
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+#champRecap .ulListe {
+    /*STRUCTURE*/
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  height: 150px;
+
+    /*STYLE*/
+
+  border-bottom: 2px solid #1bac91;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+
+
+
+#champRecap .rapport {
+  /*STRUCTURE*/
+  display: flex;
+  flex-direction: row;
+  margin: 15px 5px;
+  padding: 5px 5px 5px 5px;
+  max-width: 300px;
+  min-width: 200px;
+  height: 60px;
+
+
+  /*STYLE*/
+  box-shadow: 0px 0px 3px black;
+  border-radius: 50px;
+  background-color: #eff7f6;
+  cursor: pointer;
+
+}
+
+#champRecap .rapport .infos {
+    /*STRUCTURE*/
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 75%;
+
+}
+
+#champRecap .rapport .infos .detail {
+    /*STRUCTURE*/
+  display: flex;
+  flex-direction: column;
+}
+
+#champRecap .rapport .infos p {
+    /*STRUCTURE*/
+  margin: 0px;
+
+    /*STYLE*/
+  font-size: 70%;
+  font-weight: 600;
+
+}
+
+#champRecap .rapport .infos b{
+    /*STYLE*/
+  font-size: 0.6rem;
+}
+
+
+#champRecap .rapport .infos .date {
+    /*STRUCTURE*/
+  text-align: center;
+  margin: auto;
+  width: 80px;
+
+  /*STYLE*/
+  font-size: 0.6rem;
+
+}
+
+
+#champRecap .rapport .links {
+    /*STRUCTURE*/
+  width: 50px;
+  padding: 8px 8px;
+
+  /*STYLE*/
+  border-radius: 50%;
+  background-color: #1bac77;
+  box-shadow: inset 0px 0px 10px #ffffff;
+
+
+}
+
+#champRecap .rapport .links:hover {
+    /*STRUCTURE*/
+  width: 50px;
+  padding: 8px 8px;
+
+  /*STYLE*/
+  border-radius: 50px;
+  background-color: #1bac91;
+  box-shadow: inset 0px 0px 5px #00000083;
+
+}
+
+#champRecap .rapport .links img {
+    /*STRUCTURE*/
+  width: 100%;
+  filter: invert(100%);
+}
