@@ -170,17 +170,11 @@
   });
 
   // Portfolio details carousel
-  $(".testimonials-carousel").owlCarousel({
-    autoplayHoverPause: true,
+  $(".portfolio-details-carousel").owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
-    smartSpeed: 750, // Réduisez la vitesse pour éviter des saccades
-    responsive: {
-      0: { items: 1 },
-      768: { items: 2 },
-      900: { items: 3 }
-    }
+    items: 1
   });
 
   // Init AOS

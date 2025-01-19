@@ -733,15 +733,9 @@ section {
   min-height: 320px;
 }
 
-<<<<<<< HEAD
 .owl-carousel .testimonial-item p {
   max-height: 600px !important;
   overflow: auto;
-=======
-.owl-carousel .testimonial-item p{
-  /*max-height: 600px !important;*/
-  overflow : auto;
->>>>>>> b0a15e9791d178706a21ebd20fe09b6881741fbc
 }
 
 .testimonials .testimonial-item .testimonial-img {
