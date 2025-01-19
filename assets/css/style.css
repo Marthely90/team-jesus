@@ -1555,22 +1555,6 @@ section {
   border-radius: 50px;
 }
 
-#champRecap .ulListe {
-    /*STRUCTURE*/
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  height: 150px;
-
-    /*STYLE*/
-
-  border-bottom: 2px solid #1bac91;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
-}
-
-
 
 #champRecap .rapport {
   /*STRUCTURE*/
@@ -1604,6 +1588,9 @@ section {
     /*STRUCTURE*/
   display: flex;
   flex-direction: column;
+
+      /*STYLE*/
+  color: #1bac91;
 }
 
 #champRecap .rapport .infos p {
@@ -1663,4 +1650,39 @@ section {
     /*STRUCTURE*/
   width: 100%;
   filter: invert(100%);
+}
+
+
+
+@media only screen and (min-width: 600px) {
+#champRecap .ulListe {
+    /*STRUCTURE*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: auto;
+  height: 150px;
+
+    /*STYLE*/
+
+  border-bottom: 2px solid #1bac91;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+}
+
+@media only screen and (max-width: 600px) {
+#champRecap .ulListe {
+    /*STRUCTURE*/
+  overflow-y: auto;
+  height: 150px;
+
+    /*STYLE*/
+
+  border-bottom: 2px solid #1bac91;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
 }
