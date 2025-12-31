@@ -1,0 +1,29 @@
+@media (min-width: 993px) {
+  .nav-menu ul li a {
+    font-size: 10px;
+  }
+
+  #header {
+    height: 80px;
+  }
+
+  #hero.lt-hero {
+    width: 100%;
+    height: calc(50vh - 72px);
+    background: url(../img/hero-bg.jpg) center center;
+    background-size: cover;
+    position: relative;
+    margin-top: 72px;
+    padding: 0;
+  }
+
+  #hero.hp-hero {
+    width: 100%;
+    height: calc(50vh - 72px);
+    background: url(../img/hero-bg.jpg) center center;
+    background-size: cover;
+    position: relative;
+    margin-top: 72px;
+    padding: 0;
+  }
+}

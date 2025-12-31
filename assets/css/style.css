@@ -22,7 +22,12 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -78,7 +83,8 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-#header .logo h1 a, #header .logo h1 a:hover {
+#header .logo h1 a,
+#header .logo h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -100,7 +106,8 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-.nav-menu, .nav-menu * {
+.nav-menu,
+.nav-menu * {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -140,12 +147,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+.nav-menu a:hover:before,
+.nav-menu li:hover > a:before,
+.nav-menu .active > a:before {
   visibility: visible;
   width: 100%;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
   color: #1e7e34;
 }
 
@@ -181,7 +192,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #062822;
 }
 
-.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+.nav-menu .drop-down ul a:hover,
+.nav-menu .drop-down ul .active > a,
+.nav-menu .drop-down ul li:hover > a {
   color: #1bac91;
 }
 
@@ -276,7 +289,9 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+.mobile-nav a:hover,
+.mobile-nav .active > a,
+.mobile-nav li:hover > a {
   color: #1bac91;
   text-decoration: none;
 }
@@ -359,7 +374,6 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
   border-radius: 30px;
   background-color: hsla(220, 100%, 1%, 0.5);
-  
 }
 
 #hero h1 {
@@ -711,9 +725,9 @@ section {
   min-height: 320px;
 }
 
-.owl-carousel .testimonial-item p{
+.owl-carousel .testimonial-item p {
   max-height: 600px !important;
-  overflow : auto;
+  overflow: auto;
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -738,7 +752,8 @@ section {
   margin: 0 0 0 45px;
 }
 
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
   color: #a8d3cc;
   font-size: 26px;
 }
@@ -767,7 +782,8 @@ section {
   z-index: 1;
 }
 
-.testimonials .owl-nav, .testimonials .owl-dots {
+.testimonials .owl-nav,
+.testimonials .owl-dots {
   margin-top: 5px;
   text-align: center;
 }
@@ -822,7 +838,8 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
   color: #1bac91;
 }
 
@@ -964,7 +981,8 @@ section {
   z-index: 1;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+.portfolio-details .portfolio-details-carousel .owl-nav,
+.portfolio-details .portfolio-details-carousel .owl-dots {
   margin-top: 5px;
   text-align: left;
 }
@@ -1106,7 +1124,12 @@ section {
 }
 
 .team .member:hover .member-info {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 212, 255, 0) 100%
+  );
   opacity: 1;
   transition: 0.4s;
 }
@@ -1163,7 +1186,8 @@ section {
   color: #97cac2;
 }
 
-.faq .faq-list .icon-show, .faq .faq-list .icon-close {
+.faq .faq-list .icon-show,
+.faq .faq-list .icon-close {
   font-size: 24px;
   position: absolute;
   right: 0;
@@ -1268,7 +1292,9 @@ section {
   color: #fff;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
   background: #1bac91;
   color: #fff;
 }
@@ -1334,7 +1360,8 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input,
+.contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -1527,7 +1554,6 @@ section {
   color: #fff;
 }
 
-
 /*==========================================================================
                   RAPPORT PDF STYLE
 =============================================================================*/
@@ -1535,154 +1561,336 @@ section {
 /*champRecap*/
 #champRecap {
   /*STRUCTURE*/
-  margin: 0vh 5vw;
+  margin: 5vh auto;
+  padding: 40px 20px;
+  max-width: 1400px;
   /*STYLE*/
   color: #444444;
-
-
 }
 
 #champRecap h4 {
-    /*STRUCTURE*/
-  padding: 5px 12px;
-  max-width: 120px;
+  /*STRUCTURE*/
+  padding: 8px 16px;
+  max-width: 150px;
   text-align: center;
 
-    /*STYLE*/
+  /*STYLE*/
   background-color: #1bac91;
-  font-size: 12px;
+  font-size: 14px;
   color: #ffffff;
   border-radius: 50px;
+  margin-bottom: 40px;
 }
 
+#champRecap .ulListe {
+  /*STRUCTURE*/
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
 #champRecap .rapport {
   /*STRUCTURE*/
   display: flex;
   flex-direction: row;
-  margin: 15px 5px;
-  padding: 5px 5px 5px 5px;
-  max-width: 300px;
-  min-width: 200px;
-  height: 60px;
-
+  align-items: center;
+  width: 30rem;
+  padding: 0;
+  list-style: none;
+  gap: 20px;
 
   /*STYLE*/
-  box-shadow: 0px 0px 3px black;
-  border-radius: 50px;
-  background-color: #eff7f6;
   cursor: pointer;
-
+  transition: all 0.3s ease;
 }
 
-#champRecap .rapport .infos {
-    /*STRUCTURE*/
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 75%;
-
+#champRecap .rapport:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
 }
-
-#champRecap .rapport .infos .detail {
-    /*STRUCTURE*/
-  display: flex;
-  flex-direction: column;
-
-      /*STYLE*/
-  color: #1bac91;
-}
-
-#champRecap .rapport .infos p {
-    /*STRUCTURE*/
-  margin: 0px;
-
-    /*STYLE*/
-  font-size: 70%;
-  font-weight: 600;
-
-}
-
-#champRecap .rapport .infos b{
-    /*STYLE*/
-  font-size: 0.6rem;
-}
-
-
-#champRecap .rapport .infos .date {
-    /*STRUCTURE*/
-  text-align: center;
-  margin: auto;
-  width: 80px;
-
-  /*STYLE*/
-  font-size: 0.6rem;
-
-}
-
 
 #champRecap .rapport .links {
-    /*STRUCTURE*/
-  width: 50px;
-  padding: 8px 8px;
+  /*STRUCTURE*/
+  width: 150px;
+  height: 120px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 
   /*STYLE*/
-  border-radius: 50%;
-  background-color: #1bac77;
-  box-shadow: inset 0px 0px 10px #ffffff;
-
-
+  border-radius: 8px;
+  background-color: #d4a574;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 #champRecap .rapport .links:hover {
-    /*STRUCTURE*/
-  width: 50px;
-  padding: 8px 8px;
-
   /*STYLE*/
-  border-radius: 50px;
-  background-color: #1bac91;
-  box-shadow: inset 0px 0px 5px #00000083;
-
+  background-color: #c09560;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 #champRecap .rapport .links img {
-    /*STRUCTURE*/
+  /*STRUCTURE*/
   width: 100%;
-  filter: invert(100%);
+  height: 100%;
+  object-fit: contain;
+  filter: none;
 }
 
+#champRecap .rapport .infos {
+  /*STRUCTURE*/
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+}
 
+#champRecap .rapport .infos p {
+  /*STRUCTURE*/
+  margin: 0;
 
-@media only screen and (min-width: 600px) {
-#champRecap .ulListe {
-    /*STRUCTURE*/
+  /*STYLE*/
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+#champRecap .rapport .infos .detail {
+  /*STRUCTURE*/
+  display: flex;
+  flex-direction: column;
+
+  /*STYLE*/
+  color: #1bac91;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#champRecap .rapport .infos b {
+  /*STYLE*/
+  font-size: 14px;
+  color: #1bac91;
+}
+
+#champRecap .rapport .infos .date {
+  /*STRUCTURE*/
+  text-align: left;
+
+  /*STYLE*/
+  font-size: 12px;
+  color: #999;
+}
+
+@media only screen and (max-width: 768px) {
+  #champRecap {
+    margin: 3vh auto;
+    padding: 20px 10px;
+  }
+
+  #champRecap .ulListe {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  #champRecap .rapport {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  #champRecap .rapport .links {
+    width: 120px;
+    height: 100px;
+  }
+
+  #champRecap .rapport .infos {
+    text-align: center;
+    gap: 8px;
+  }
+
+  #champRecap .rapport .infos p {
+    font-size: 16px;
+  }
+}
+
+/*==========================================================================
+                  HEY PASTEUR VIDEO STYLE
+=============================================================================*/
+
+/*hpasteur*/
+#hpasteur {
+  /*STRUCTURE*/
+  margin: 5vh auto;
+  padding: 40px 20px;
+  max-width: 1400px;
+  /*STYLE*/
+  color: #444444;
+}
+
+#hpasteur h4 {
+  /*STRUCTURE*/
+  padding: 8px 16px;
+  max-width: 150px;
+  text-align: center;
+
+  /*STYLE*/
+  background-color: #1bac91;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 50px;
+  margin-bottom: 40px;
+}
+
+#hpasteur .ulListe {
+  /*STRUCTURE*/
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  overflow-y: auto;
-  height: 150px;
-
-    /*STYLE*/
-
-  border-bottom: 2px solid #1bac91;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
-}
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-@media only screen and (max-width: 600px) {
-#champRecap .ulListe {
-    /*STRUCTURE*/
-  overflow-y: auto;
-  height: 150px;
+#hpasteur .rapport {
+  /*STRUCTURE*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(50% - 15px);
+  padding: 0;
+  list-style: none;
+  gap: 20px;
 
-    /*STYLE*/
-
-  border-bottom: 2px solid #1bac91;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
+  /*STYLE*/
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+#hpasteur .rapport:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+#hpasteur .rapport .links {
+  /*STRUCTURE*/
+  width: 300px;
+  height: 200px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  /*STYLE*/
+  border-radius: 8px;
+  background-color: #d4a574;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#hpasteur .rapport .links:hover {
+  /*STYLE*/
+  background-color: #c09560;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#hpasteur .rapport .links img {
+  /*STRUCTURE*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+}
+
+#hpasteur .rapport .infos {
+  /*STRUCTURE*/
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+}
+
+#hpasteur .rapport .infos p {
+  /*STRUCTURE*/
+  margin: 0;
+
+  /*STYLE*/
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+#hpasteur .rapport .infos .detail {
+  /*STRUCTURE*/
+  display: flex;
+  flex-direction: column;
+
+  /*STYLE*/
+  color: #1bac91;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#hpasteur .rapport .infos b {
+  /*STYLE*/
+  font-size: 14px;
+  color: #1bac91;
+}
+
+#hpasteur .rapport .infos .date {
+  /*STRUCTURE*/
+  text-align: left;
+
+  /*STYLE*/
+  font-size: 12px;
+  color: #999;
+}
+
+@media only screen and (max-width: 768px) {
+  #hpasteur {
+    margin: 3vh auto;
+    padding: 20px 10px;
+  }
+
+  #hpasteur .ulListe {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  #hpasteur .rapport {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  #hpasteur .rapport .links {
+    width: 240px;
+    height: 160px;
+  }
+
+  #hpasteur .rapport .infos {
+    text-align: center;
+    gap: 8px;
+  }
+
+  #hpasteur .rapport .infos p {
+    font-size: 16px;
+  }
 }
