@@ -31,23 +31,28 @@ function loadRapportData() {
 }
 
 function displayRapportTable() {
-  const tbody = document.getElementById("rapport-tbody");
-  tbody.innerHTML = "";
+  const list = document.getElementById("rapport-list");
+  list.innerHTML = "";
 
-  Object.keys(rapportData).forEach((key, index) => {
+  Object.keys(rapportData).forEach((key) => {
     const rapport = rapportData[key];
-    const row = document.createElement("tr");
-    row.innerHTML = `
-            <td>${rapport.nom}</td>
-            <td>${rapport.categorie}</td>
-            <td><a href="${rapport.url}" target="_blank">Ouvrir</a></td>
-            <td>${rapport.date}</td>
-            <td>
-                <button class="btn btn-sm btn-warning" onclick="editRapport('${key}')"><i class="fas fa-edit"></i> Éditer</button>
-                <button class="btn btn-sm btn-danger" onclick="deleteRapport('${key}')"><i class="fas fa-trash"></i> Supprimer</button>
-            </td>
-        `;
-    tbody.appendChild(row);
+    const item = document.createElement("div");
+    item.className = "rapport-item";
+    item.innerHTML = `
+      <div class="rapport-item-content">
+        <div class="rapport-info">
+          <h6 class="rapport-name">${rapport.nom}</h6>
+          <span class="rapport-category">${rapport.categorie}</span>
+          <small class="rapport-date">${rapport.date}</small>
+        </div>
+        <div class="rapport-actions">
+          <a href="${rapport.url}" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-external-link-alt"></i> Ouvrir</a>
+          <button class="btn btn-sm btn-warning" onclick="editRapport('${key}')"><i class="fas fa-edit"></i></button>
+          <button class="btn btn-sm btn-danger" onclick="deleteRapport('${key}')"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+    `;
+    list.appendChild(item);
   });
 }
 
@@ -132,18 +137,22 @@ function displayVideoGrid() {
   Object.keys(videoData).forEach((key) => {
     const video = videoData[key];
     const card = document.createElement("div");
-    card.className = "col-md-6 col-lg-4 mb-4";
+    card.className = "col-12 mb-4";
     card.innerHTML = `
-            <div class="card">
-                <img src="${video.thumbnail}" class="card-img-top" alt="${video.nom}" style="height: 200px; object-fit: cover;">
-                <div class="card-body">
+            <div class="card card-horizontal">
+                <div class="card-horizontal-img">
+                    <img src="${video.thumbnail}" class="card-img-horizontal" alt="${video.nom}">
+                </div>
+                <div class="card-body card-body-horizontal">
                     <h5 class="card-title">${video.nom}</h5>
                     <p class="card-text">
                         <small class="text-muted">${video.date}</small><br>
-                        <a href="${video.url}" target="_blank">Voir la vidéo</a>
+                        <a href="${video.url}" target="_blank" class="btn btn-sm btn-outline-primary mt-2"><i class="fas fa-play"></i> Voir la vidéo</a>
                     </p>
-                    <button class="btn btn-sm btn-warning" onclick="editVideo('${key}')"><i class="fas fa-edit"></i> Éditer</button>
-                    <button class="btn btn-sm btn-danger" onclick="deleteVideo('${key}')"><i class="fas fa-trash"></i> Supprimer</button>
+                </div>
+                <div class="card-actions-horizontal">
+                    <button class="btn btn-sm btn-warning" onclick="editVideo('${key}')" title="Éditer"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteVideo('${key}')" title="Supprimer"><i class="fas fa-trash"></i></button>
                 </div>
             </div>
         `;
