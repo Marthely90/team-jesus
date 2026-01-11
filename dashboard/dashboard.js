@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function loadRapportData() {
   fetch("../assets/data/rapport.json")
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) throw new Error("Failed to load rapport data");
+      return response.json();
+    })
     .then((data) => {
       rapportData = data;
       displayRapportTable();
@@ -58,11 +61,13 @@ function displayRapportTable() {
 
 function openRapportForm() {
   editingRapportId = null;
-  document.getElementById("rapport-form").style.display = "block";
+  const form = document.getElementById("rapport-form");
+  const formTitle = form.querySelector("h5");
+  if (formTitle) {
+    formTitle.textContent = "Nouveau Rapport";
+  }
+  form.style.display = "block";
   document.getElementById("rapportFormElement").reset();
-  document
-    .getElementById("rapportFormElement")
-    .querySelector("h5").textContent = "Nouveau Rapport";
 }
 
 function closeRapportForm() {
@@ -79,7 +84,12 @@ function editRapport(key) {
   document.getElementById("rapport-url").value = rapport.url;
   document.getElementById("rapport-date").value = rapport.date;
 
-  document.getElementById("rapport-form").style.display = "block";
+  const form = document.getElementById("rapport-form");
+  const formTitle = form.querySelector("h5");
+  if (formTitle) {
+    formTitle.textContent = "Modifier le Rapport";
+  }
+  form.style.display = "block";
 }
 
 function deleteRapport(key) {
@@ -91,31 +101,17 @@ function deleteRapport(key) {
 
 function saveRapportData() {
   localStorage.setItem("rapportData", JSON.stringify(rapportData));
-
-  // Tentative de sauvegarde côté serveur
-  fetch("/api/save-rapport", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(rapportData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      showAlert("Rapport sauvegardé avec succès", "success");
-      loadRapportData();
-    })
-    .catch((error) => {
-      console.log("Note: Les changements sont sauvegardés localement");
-      loadRapportData();
-    });
+  displayRapportTable();
 }
 
 // ==================== VIDEO FUNCTIONS ====================
 
 function loadVideoData() {
   fetch("../assets/data/heyPasteur.json")
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) throw new Error("Failed to load video data");
+      return response.json();
+    })
     .then((data) => {
       videoData = data;
       displayVideoGrid();
@@ -162,7 +158,12 @@ function displayVideoGrid() {
 
 function openVideoForm() {
   editingVideoId = null;
-  document.getElementById("video-form").style.display = "block";
+  const form = document.getElementById("video-form");
+  const formTitle = form.querySelector("h5");
+  if (formTitle) {
+    formTitle.textContent = "Nouvelle Vidéo";
+  }
+  form.style.display = "block";
   document.getElementById("videoFormElement").reset();
 }
 
@@ -180,7 +181,12 @@ function editVideo(key) {
   document.getElementById("video-thumbnail").value = video.thumbnail;
   document.getElementById("video-date").value = video.date;
 
-  document.getElementById("video-form").style.display = "block";
+  const form = document.getElementById("video-form");
+  const formTitle = form.querySelector("h5");
+  if (formTitle) {
+    formTitle.textContent = "Modifier la Vidéo";
+  }
+  form.style.display = "block";
 }
 
 function deleteVideo(key) {
@@ -192,23 +198,7 @@ function deleteVideo(key) {
 
 function saveVideoData() {
   localStorage.setItem("videoData", JSON.stringify(videoData));
-
-  fetch("/api/save-video", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(videoData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      showAlert("Vidéo sauvegardée avec succès", "success");
-      loadVideoData();
-    })
-    .catch((error) => {
-      console.log("Note: Les changements sont sauvegardés localement");
-      loadVideoData();
-    });
+  displayVideoGrid();
 }
 
 // ==================== FORM LISTENERS ====================
@@ -223,6 +213,11 @@ function setupFormListeners() {
       const categorie = document.getElementById("rapport-categorie").value;
       const url = document.getElementById("rapport-url").value;
       const date = document.getElementById("rapport-date").value;
+
+      if (!nom || !categorie || !url || !date) {
+        alert("Tous les champs sont obligatoires");
+        return;
+      }
 
       if (editingRapportId) {
         rapportData[editingRapportId] = { nom, categorie, url, date };
@@ -249,6 +244,11 @@ function setupFormListeners() {
       const url = document.getElementById("video-url").value;
       const thumbnail = document.getElementById("video-thumbnail").value;
       const date = document.getElementById("video-date").value;
+
+      if (!nom || !url || !thumbnail || !date) {
+        alert("Tous les champs sont obligatoires");
+        return;
+      }
 
       if (editingVideoId) {
         videoData[editingVideoId] = { nom, url, thumbnail, date };

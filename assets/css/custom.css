@@ -7,10 +7,10 @@
     height: 80px;
   }
 
-  #hero.lt-hero {
+  #hero.ltb-hero {
     width: 100%;
     height: calc(50vh - 72px);
-    background: url(../img/hero-bg.jpg) center center;
+    background: url(../img/ltb_hero-bg.png) center center;
     background-size: cover;
     position: relative;
     margin-top: 72px;
@@ -20,10 +20,24 @@
   #hero.hp-hero {
     width: 100%;
     height: calc(50vh - 72px);
-    background: url(../img/hero-bg.jpg) center center;
+    background: url(../img/hp_hero-bg.png) center center;
     background-size: cover;
     position: relative;
     margin-top: 72px;
     padding: 0;
   }
+}
+@media (max-width: 993px) {
+  #hero.ltb-hero {
+    height: calc(100vh - 72px);
+  }
+  #hero.hp-hero {
+    height: calc(100vh - 72px);
+  }
+}
+#hero.ltb-hero {
+  background: url(../img/ltb_hero-bg.png) center center;
+}
+#hero.hp-hero {
+  background: url(../img/hp_hero-bg.png) center center;
 }
