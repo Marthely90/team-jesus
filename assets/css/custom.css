@@ -10,7 +10,7 @@
   #hero.ltb-hero {
     width: 100%;
     height: calc(50vh - 72px);
-    background: url(../img/ltb_hero-bg.png) center center;
+    background: url(../img/banniere_ltp.jpg) center center;
     background-size: cover;
     position: relative;
     margin-top: 72px;
@@ -20,7 +20,7 @@
   #hero.hp-hero {
     width: 100%;
     height: calc(50vh - 72px);
-    background: url(../img/hp_hero-bg.png) center center;
+    background: url(../img/banniere_hp.jpg) center center;
     background-size: cover;
     position: relative;
     margin-top: 72px;
@@ -36,10 +36,10 @@
   }
 }
 #hero.ltb-hero {
-  background: url(../img/ltb_hero-bg.png) center center;
+  background: url(../img/banniere_ltb.jpg) center center;
 }
 #hero.hp-hero {
-  background: url(../img/hp_hero-bg.png) center center;
+  background: url(../img/banniere_hp.jpg) center center;
 }
 
 /* ====== Modal Flottant pour Vidéos ====== */
