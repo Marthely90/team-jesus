@@ -375,8 +375,9 @@ h6 {
 
 #hero .container {
   z-index: 2;
-  border-radius: 30px;
+  border-radius: 25px;
   background-color: hsla(220, 100%, 1%, 0.5);
+  padding: 15px;
 }
 
 #hero h1 {
