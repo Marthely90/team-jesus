@@ -1,32 +1,50 @@
 {
   "Video_1": {
-    "nom": "Que dit la Bible à propos du pardon ?",
-    "url": "https://example.com/video1.mp4",
-    "thumbnail": "https://picsum.photos/600/400?random=1",
-    "date": "2024-01-15"
+    "nom": "La bible et le pardon 1/2 ",
+    "url": "https://www.instagram.com/reel/DCzYRe4tV3g/?igsh=Nnk3eXEwbzU3YXdi",
+    "thumbnail": "assets/img/heyPasteur/La Bible et le pardon_1sur2.jpg",
+    "date": "01 - 02 - 2026"
   },
   "Video_2": {
-    "nom": "Comment découvrir mon appel ?",
-    "url": "https://example.com/video2.mp4",
-    "thumbnail": "https://picsum.photos/600/400?random=2",
-    "date": "2024-01-22"
+    "nom": "La bible et le pardon 2/2 ",
+    "url": "https://www.instagram.com/reel/DDKf_mpNUzw/?igsh=MWQwYWg5cTlwaHBleQ==",
+    "thumbnail": "assets/img/heyPasteur/La Bible et le pardon_2sur2.jpg",
+    "date": "01 - 02 - 2026"
   },
   "Video_3": {
-    "nom": "Comment découvrir mon appel ?",
-    "url": "https://example.com/video3.mp4",
-    "thumbnail": "https://picsum.photos/600/400?random=3",
-    "date": "2024-01-22"
+    "nom": "Découvrir son appel 1/4 ",
+    "url": "https://www.instagram.com/reel/DEVL6HRNe-n/?igsh=MWN5N29qb2FhN2RwZw==",
+    "thumbnail": "assets/img/heyPasteur/Découvrir son appel_1sur4.jpg",
+    "date": "01 - 02 - 2026"
   },
   "Video_4": {
-    "nom": "Comment découvrir mon appel ?",
-    "url": "https://example.com/video4.mp4",
-    "thumbnail": "https://picsum.photos/600/400?random=4",
-    "date": "2024-01-22"
+    "nom": "Découvrir son appel 2/4",
+    "url": "https://www.instagram.com/reel/DEaDYrPtM7v/?igsh=MW1nYmx6OHVpcTk1cw==",
+    "thumbnail": "assets/img/heyPasteur/Découvrir son appel_2sur4.jpg",
+    "date": "01 - 02 - 2026"
   },
   "Video_5": {
-    "nom": "Comment découvrir mon appel ?",
-    "url": "https://example.com/video5.mp4",
-    "thumbnail": "https://picsum.photos/600/400?random=5",
-    "date": "2024-01-22"
+    "nom": "Découvrir son appel 3/4",
+    "url": "https://www.instagram.com/reel/DEh8IF2NUKl/?igsh=MTRuZTAyNDU3dzBjZw==",
+    "thumbnail": "assets/img/heyPasteur/Découvrir son appel_3sur4.jpg",
+    "date": "01 - 02 - 2026"
+  },
+  "Video_6": {
+    "nom": "Découvrir son appel 4/4",
+    "url": "https://www.instagram.com/reel/DEnMoHONEzw/?igsh=b3Noc2ZjdDdxZjZ2",
+    "thumbnail": "assets/img/heyPasteur/Découvrir son appel_4sur4.jpg",
+    "date": "01 - 02 - 2026"
+  },
+  "Video_7": {
+    "nom": "Vaincre la procrastination 1/2",
+    "url": "https://www.instagram.com/reel/DENgDnjNup3/?igsh=MXJzZ3p6dHI4Z2k1eA==",
+    "thumbnail": "assets/img/heyPasteur/Vaincre la proccrastination_1sur2.jpg",
+    "date": "01 - 02 - 2026"
+  },
+  "Video_8": {
+    "nom": "Vaincre la procrastination 2/2",
+    "url": "https://www.instagram.com/reel/DEPs0iHNIJh/?igsh=MzRlOWw1Y29zcmxw",
+    "thumbnail": "assets/img/heyPasteur/Vaincre la proccrastination_2sur2.jpg",
+    "date": "01 - 02 - 2026"
   }
 }

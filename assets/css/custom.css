@@ -41,3 +41,280 @@
 #hero.hp-hero {
   background: url(../img/hp_hero-bg.png) center center;
 }
+
+/* ====== Modal Flottant pour Vidéos ====== */
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#modalVideoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Format COURT (Shorts, Reels, TikTok, Snapchat) ===== */
+.video-modal.video-short {
+  padding: 10px;
+}
+
+.video-modal.video-short .modal-content {
+  width: 100%;
+  max-width: 480px;
+  height: 85vh;
+  max-height: 85vh;
+}
+
+.video-modal.video-short #modalVideoContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.video-modal.video-short iframe,
+.video-modal.video-short blockquote {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  border: none !important;
+}
+
+/* ===== Format NORMAL (YouTube Vidéos) ===== */
+.video-modal.video-normal {
+  padding: 20px;
+}
+
+.video-modal.video-normal .modal-content {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  max-height: 85vh;
+}
+
+.video-modal.video-normal #modalVideoContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.video-modal.video-normal iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.close-modal:hover {
+  color: #ff6b6b;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 107, 107, 0.5);
+  transform: rotate(90deg);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablette (768px - 1024px) */
+@media (max-width: 1024px) {
+  .video-modal {
+    padding: 15px;
+  }
+
+  .video-modal.video-short .modal-content {
+    max-width: 450px;
+    height: 80vh;
+  }
+
+  .video-modal.video-normal .modal-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .close-modal {
+    top: 12px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    font-size: 28px;
+  }
+}
+
+/* Petite Tablette / Grand Mobile (600px - 768px) */
+@media (max-width: 768px) {
+  .video-modal {
+    padding: 10px;
+  }
+
+  .video-modal.video-short .modal-content {
+    max-width: 100%;
+    width: 100%;
+    height: 85vh;
+  }
+
+  .video-modal.video-normal .modal-content {
+    width: calc(100% - 20px);
+    max-width: 100%;
+    max-height: 75vh;
+    aspect-ratio: 16 / 9;
+  }
+
+  .close-modal {
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile Landscape / Petit Mobile (480px - 600px) */
+@media (max-width: 600px) {
+  .video-modal {
+    padding: 8px;
+  }
+
+  .video-modal.video-short .modal-content {
+    max-width: 100%;
+    width: 100%;
+    height: 90vh;
+  }
+
+  .video-modal.video-normal .modal-content {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    aspect-ratio: 16 / 9;
+  }
+
+  .close-modal {
+    top: 8px;
+    right: 8px;
+    font-size: 22px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Petit Mobile Portrait (< 480px) */
+@media (max-width: 480px) {
+  .video-modal {
+    padding: 0;
+  }
+
+  .video-modal.video-short .modal-content {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    max-width: none;
+  }
+
+  .video-modal.video-normal .modal-content {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    aspect-ratio: auto;
+    max-height: 100vh;
+  }
+
+  .video-modal.video-normal #modalVideoContainer {
+    overflow: auto;
+  }
+
+  .close-modal {
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Très petit écran (<= 360px) */
+@media (max-width: 360px) {
+  .close-modal {
+    top: 3px;
+    right: 3px;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .video-modal.video-short iframe,
+  .video-modal.video-normal iframe {
+    max-height: 100vh !important;
+  }
+}
+
+/* Orientation Landscape sur mobile */
+@media (max-height: 500px) and (max-width: 768px) {
+  .video-modal.video-short .modal-content {
+    height: 95vh;
+  }
+
+  .video-modal.video-normal .modal-content {
+    max-height: 95vh;
+  }
+}
